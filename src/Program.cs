@@ -1,5 +1,3 @@
-// https://docs.microsoft.com/en-us/dotnet/core/diagnostics/metrics-instrumentation
-
 using MonitoringExample;
 using OpenTelemetry.Metrics;
 

@@ -1,6 +1,6 @@
 # Monitoring with OpenTelemetry and System.Diagnostics.Metrics API
 
-The current project demonstrates how the new Metrics API of .NET can be used to produce metrics for Prometheus. It contains two sources of Metrics:
+The current project demonstrates how the new [Metrics API of .NET](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/metrics-instrumentation) can be used to produce metrics for Prometheus. It contains two sources of Metrics:
 
 * `ApiApplicationJob` - represents handling HTTP requests
 * `BatchApplicationJob` - represents background worker that does batch processing
