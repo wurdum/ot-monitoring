@@ -143,6 +143,7 @@ dotnet_diagnostic.CA1805.severity = none # Do not initialize unnecessarily.
 dotnet_diagnostic.CA1812.severity = none # Allow uninstantiated internal classes to support top level statements in 'Program.cs'.
 dotnet_diagnostic.CA1816.severity = none # Do not require full Dispose pattern implementation.
 dotnet_diagnostic.CA1848.severity = none # Disable requirement to use generators for logging.
+dotnet_diagnostic.CA1852.severity = none # Do not require types to be sealed.
 dotnet_diagnostic.CA2007.severity = none # Do not require usage of '.ConfigureAwait(false)'.
 dotnet_diagnostic.CA2234.severity = none # Allow using string instead for 'Uri'.
 dotnet_diagnostic.CA5394.severity = none # Allow the usage of non-secure random generator.

@@ -1,4 +1,5 @@
 using MonitoringExample;
+using OpenTelemetry;
 using OpenTelemetry.Metrics;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,14 +10,15 @@ builder.Services
     .AddHostedService<BatchApplicationJob>();
 
 // Configure Exporter and Metrics Sources.
-builder.Services.AddOpenTelemetryMetrics(b =>
-{
-    b.AddPrometheusExporter()
-        .AddRuntimeMetrics()
-        .AddAspNetCoreInstrumentation()
-        .AddMeter(ApiApplicationJob.ApiApplicationJobMeter)
-        .AddMeter(BatchApplicationJob.BatchApplicationJobMeter);
-});
+builder.Services.AddOpenTelemetry()
+    .WithMetrics(b =>
+    {
+        b.AddPrometheusExporter()
+            .AddRuntimeInstrumentation()
+            .AddAspNetCoreInstrumentation()
+            .AddMeter(ApiApplicationJob.ApiApplicationJobMeter)
+            .AddMeter(BatchApplicationJob.BatchApplicationJobMeter);
+    });
 
 var app = builder.Build();
 
